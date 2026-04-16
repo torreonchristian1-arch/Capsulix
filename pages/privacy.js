@@ -6,15 +6,15 @@ const LAST_UPDATED = "April 15, 2026";
 const SECTIONS = [
   {
     title: "1. Introduction",
-    content: `Cucuma® ("we", "our", or "us") operates as a private label beauty fulfillment platform accessible via the Shopify App Store and at cucuma.vercel.app. This Privacy Policy explains how we collect, use, disclose, and protect information when you use our services.
+    content: `Manexlux® ("we", "our", or "us") operates as a private label hair extension fulfillment platform accessible via the Shopify App Store and at manexlux.vercel.app. This Privacy Policy explains how we collect, use, disclose, and protect information when you use our services.
 
-By installing the Cucuma app or using our website, you agree to the collection and use of information in accordance with this policy.`
+By installing the Manexlux app or using our website, you agree to the collection and use of information in accordance with this policy.`
   },
   {
     title: "2. Information We Collect",
     content: `We collect the following types of information:
 
-**Store Information:** When you install Cucuma, we collect your Shopify store domain, store name, email address, and OAuth access tokens required to interact with the Shopify API on your behalf.
+**Store Information:** When you install Manexlux, we collect your Shopify store domain, store name, email address, and OAuth access tokens required to interact with the Shopify API on your behalf.
 
 **Order Data:** We receive order information from your Shopify store including order numbers, customer names, shipping addresses, and product details. This is required to fulfill orders on your behalf.
 
@@ -26,7 +26,7 @@ By installing the Cucuma app or using our website, you agree to the collection a
     title: "3. How We Use Your Information",
     content: `We use the information we collect to:
 
-- Provide, operate, and maintain the Cucuma platform
+- Provide, operate, and maintain the Manexlux platform
 - Process and fulfill orders placed on your Shopify store
 - Apply your branding to private label products
 - Send transactional notifications related to orders and fulfillment
@@ -48,7 +48,7 @@ By installing the Cucuma app or using our website, you agree to the collection a
   },
   {
     title: "5. Data Retention",
-    content: `We retain your store data for as long as you have the Cucuma app installed. Upon uninstallation, we will delete your store's data within 30 days in accordance with Shopify's GDPR requirements.
+    content: `We retain your store data for as long as you have the Manexlux app installed. Upon uninstallation, we will delete your store's data within 30 days in accordance with Shopify's GDPR requirements.
 
 Order data may be retained for up to 7 years for accounting and legal compliance purposes.`
   },
@@ -60,7 +60,7 @@ Order data may be retained for up to 7 years for accounting and legal compliance
 - **customers/redact:** We delete customer personal data upon request
 - **shop/redact:** We delete all store data within 30 days of app uninstallation
 
-To submit a data request, contact us at support@cucuma.com.`
+To submit a data request, contact us at support@manexlux.com.`
   },
   {
     title: "7. Security",
@@ -75,7 +75,7 @@ However, no method of transmission over the Internet is 100% secure. We cannot g
   },
   {
     title: "8. Cookies",
-    content: `The Cucuma web dashboard may use session cookies for authentication purposes. We do not use cookies for advertising or tracking. You can configure your browser to refuse cookies, though this may affect functionality.`
+    content: `The Manexlux web dashboard may use session cookies for authentication purposes. We do not use cookies for advertising or tracking. You can configure your browser to refuse cookies, though this may affect functionality.`
   },
   {
     title: "9. Third-Party Links",
@@ -83,7 +83,7 @@ However, no method of transmission over the Internet is 100% secure. We cannot g
   },
   {
     title: "10. Children's Privacy",
-    content: `Cucuma is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us immediately.`
+    content: `Manexlux is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us immediately.`
   },
   {
     title: "11. Changes to This Policy",
@@ -93,9 +93,9 @@ However, no method of transmission over the Internet is 100% secure. We cannot g
     title: "12. Contact Us",
     content: `If you have questions about this Privacy Policy or wish to exercise your data rights, contact us at:
 
-**Email:** support@cucuma.com
-**Website:** https://cucuma.vercel.app
-**Company:** Cucuma Private Label Beauty Platform`
+**Email:** support@manexlux.com
+**Website:** https://manexlux.vercel.app
+**Company:** Manexlux Private Label Beauty Platform`
   },
 ];
 
@@ -111,8 +111,8 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy — Cucuma®</title>
-        <meta name="description" content="Cucuma Privacy Policy — how we collect, use, and protect your data." />
+        <title>Privacy Policy — Manexlux®</title>
+        <meta name="description" content="Manexlux Privacy Policy — how we collect, use, and protect your data." />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <style>{`
           *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -127,7 +127,7 @@ export default function PrivacyPolicy() {
       {/* Nav */}
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 100, height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 48px", background: navScrolled ? "rgba(12,12,12,0.97)" : "transparent", backdropFilter: "blur(16px)", borderBottom: navScrolled ? "1px solid #2A2A2A" : "1px solid transparent", transition: "all 0.3s" }}>
         <a href="/" style={{ fontFamily: "Georgia, serif", fontSize: 20, fontWeight: 700, color: "#F5F0EB" }}>
-          Cucuma<span style={{ color: "#C4975A" }}>®</span>
+          Manexlux<span style={{ color: "#C4975A" }}>®</span>
         </a>
         <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
           <a href="/terms" style={{ fontSize: 13, color: "#9A9490" }}>Terms of Service</a>
@@ -147,7 +147,7 @@ export default function PrivacyPolicy() {
         {/* Intro banner */}
         <div style={{ background: "#161616", border: "1px solid #2A2A2A", borderRadius: 12, padding: "20px 24px", marginBottom: 48, borderLeft: "3px solid #C4975A" }}>
           <p style={{ fontSize: 14, color: "#9A9490", lineHeight: 1.7 }}>
-            This Privacy Policy describes how Cucuma® collects, uses, and protects your information when you use our private label beauty platform. We take your privacy seriously and are committed to transparency.
+            This Privacy Policy describes how Manexlux® collects, uses, and protects your information when you use our private label hair extension platform. We take your privacy seriously and are committed to transparency.
           </p>
         </div>
 
@@ -179,15 +179,15 @@ export default function PrivacyPolicy() {
         {/* Footer links */}
         <div style={{ borderTop: "1px solid #2A2A2A", paddingTop: 32, display: "flex", gap: 24, flexWrap: "wrap" }}>
           <a href="/terms" style={{ fontSize: 13, color: "#C4975A" }}>Terms of Service →</a>
-          <a href="mailto:support@cucuma.com" style={{ fontSize: 13, color: "#C4975A" }}>Contact Us →</a>
+          <a href="mailto:support@manexlux.com" style={{ fontSize: 13, color: "#C4975A" }}>Contact Us →</a>
           <a href="/" style={{ fontSize: 13, color: "#6B6560" }}>← Back to Home</a>
         </div>
       </div>
 
       {/* Footer */}
       <div style={{ background: "#161616", borderTop: "1px solid #2A2A2A", padding: "24px 48px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-        <span style={{ fontFamily: "Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F5F0EB" }}>Cucuma<span style={{ color: "#C4975A" }}>®</span></span>
-        <span style={{ fontSize: 12, color: "#6B6560" }}>© 2026 Cucuma®. All Rights Reserved.</span>
+        <span style={{ fontFamily: "Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F5F0EB" }}>Manexlux<span style={{ color: "#C4975A" }}>®</span></span>
+        <span style={{ fontSize: 12, color: "#6B6560" }}>© 2026 Manexlux®. All Rights Reserved.</span>
       </div>
     </>
   );
