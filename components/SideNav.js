@@ -57,7 +57,7 @@ export default function SideNav({ active, shop, open = true }) {
           </div>
           {!compact && (
             <div>
-              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, fontWeight: 600, color: T.textPrimary, letterSpacing: "-0.01em", lineHeight: 1.2 }}>Cucuma®</div>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 18, fontWeight: 600, color: T.textPrimary, letterSpacing: "-0.01em", lineHeight: 1.2 }}>Capsulix®</div>
               <div style={{ fontSize: 9, fontWeight: 600, color: T.textTertiary, letterSpacing: "0.14em", textTransform: "uppercase" }}>Private Label</div>
             </div>
           )}
