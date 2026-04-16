@@ -110,45 +110,31 @@ export default function Branding() {
     setGenerating(true);
     setMockupResult(null);
     setImportDone(false);
-    const prompt = `You are a luxury beauty product mockup designer. Generate a detailed mockup description for:
-Brand: ${brandName}, Tagline: ${tagline}, Product: ${selectedProduct}, Label Style: ${style}, Finish: ${finish}, Layout: ${layout}, Font: ${font}, Primary Color: ${primary}, Background: ${mockupStyle}
-
-Respond ONLY with this JSON (no markdown, no extra text):
-{"description":"2 sentence vivid mockup description","ideogramPrompt":"detailed Ideogram AI prompt for photorealistic product mockup","retailPrice":49.99,"wholesalePrice":22.99,"margin":54}`;
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const response = await fetch("/api/ai/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 1000, messages: [{ role: "user", content: prompt }] })
+        body: JSON.stringify({ type: "mockup", brandName, tagline, product: selectedProduct, style, finish, layout, font, primary, secondary, accent, mockupStyle })
       });
       const data = await response.json();
-      const text = data.content?.[0]?.text || "";
-      try {
-        setMockupResult(JSON.parse(text.replace(/```json|```/g, "").trim()));
-      } catch {
-        setMockupResult({ description: text.slice(0, 200), ideogramPrompt: `Luxury ${selectedProduct} mockup with ${brandName} branding, ${style} label, ${finish} finish, ${mockupStyle} background, photorealistic beauty photography`, retailPrice: 49.99, wholesalePrice: 22.99, margin: 54 });
-      }
-    } catch { setToast({ msg: "Generation failed.", type: "error" }); }
+      if (data.error) { setToast({ msg: data.error, type: "error" }); }
+      else setMockupResult(data);
+    } catch { setToast({ msg: "Generation failed. Please try again.", type: "error" }); }
     setGenerating(false);
   }
 
   async function generateCatalogue() {
     setAiGenerating(true);
     setAiResult(null);
-    const prompt = `You are a luxury beauty brand copywriter for ${brandName}. Generate product content for: ${aiProduct}
-
-Respond ONLY with this JSON (no markdown):
-{"title":"${brandName} ${aiProduct}","shortDesc":"one line description max 10 words","fullDesc":"compelling 2-3 sentence Shopify listing description","keyBenefits":["benefit 1","benefit 2","benefit 3","benefit 4"],"ingredients":["ingredient 1","ingredient 2","ingredient 3"],"suggestedRetailPrice":49.99,"wholesaleCost":22.99,"profitMargin":54,"tags":["tag1","tag2","tag3","tag4","tag5"],"seoTitle":"SEO title under 60 chars","seoDescription":"SEO description under 160 chars"}`;
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const response = await fetch("/api/ai/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: 1000, messages: [{ role: "user", content: prompt }] })
+        body: JSON.stringify({ type: "catalogue", brandName, tagline, product: aiProduct, style })
       });
       const data = await response.json();
-      const text = data.content?.[0]?.text || "";
-      try { setAiResult(JSON.parse(text.replace(/```json|```/g, "").trim())); }
-      catch { setAiResult({ fullDesc: text, suggestedRetailPrice: 49.99, wholesaleCost: 22.99, profitMargin: 54 }); }
+      if (data.error) { setToast({ msg: data.error, type: "error" }); }
+      else setAiResult(data);
     } catch { setToast({ msg: "AI generation failed.", type: "error" }); }
     setAiGenerating(false);
   }
@@ -420,7 +406,7 @@ Respond ONLY with this JSON (no markdown):
                   <div style={{ fontFamily:font.includes("Serif")?"Georgia,serif":"sans-serif", fontSize:font.includes("Bold")?17:14, fontWeight:font.includes("Bold")?800:600, color:primary, letterSpacing:layout==="Minimal"?"0.18em":"0.05em", fontStyle:style==="Classic"?"italic":"normal", textTransform:layout==="Minimal"?"uppercase":"none", marginBottom:5 }}>{brandName}</div>
                   <div style={{ fontSize:9, color:secondary, letterSpacing:"0.12em", textTransform:"uppercase", opacity:0.7, marginBottom:12 }}>{tagline}</div>
                   <div style={{ width:28, height:1, background:primary, margin:"0 auto 10px", opacity:0.5 }}></div>
-                  <div style={{ fontSize:11, color:secondary }}>Whey Protein Blend · 500g</div>
+                  <div style={{ fontSize:11, color:secondary }}>Whey Protein · 500g</div>
                   <div style={{ fontSize:9, color:accent, marginTop:4, opacity:0.7 }}>{finish} finish · {layout}</div>
                 </div>
                 <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
