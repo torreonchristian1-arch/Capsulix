@@ -10,25 +10,25 @@ const supabase = createClient(
 
 const PLANS = {
   starter: {
-    name: "Cucuma Starter",
+    name: "Capsulix Starter",
     price: "17.99",
     interval: "EVERY_30_DAYS",
     trialDays: 14,
   },
   growth: {
-    name: "Cucuma Growth",
+    name: "Capsulix Growth",
     price: "44.99",
     interval: "EVERY_30_DAYS",
     trialDays: 14,
   },
   starter_yearly: {
-    name: "Cucuma Starter (Yearly)",
+    name: "Capsulix Starter (Yearly)",
     price: "172.70",
     interval: "ANNUAL",
     trialDays: 14,
   },
   growth_yearly: {
-    name: "Cucuma Growth (Yearly)",
+    name: "Capsulix Growth (Yearly)",
     price: "431.90",
     interval: "ANNUAL",
     trialDays: 14,

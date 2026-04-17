@@ -50,12 +50,12 @@ export default async function handler(req, res) {
     .eq("shop_domain", shop)
     .single();
 
-  const brandName = branding?.brand_name || "Cucuma";
+  const brandName = branding?.brand_name || "Capsulix";
   const tagline = branding?.tagline || "Premium Beauty Collection";
 
   // ── STEP 3: Build the Shopify product payload ─────────────────
   // This is the data structure Shopify needs to create a product.
-  // We combine the Cucuma product info with the merchant's branding.
+  // We combine the Capsulix product info with the merchant's branding.
   const shopifyProduct = {
     product: {
       title: `${brandName} — ${product.name}`,
